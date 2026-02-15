@@ -29,3 +29,15 @@ Cada vez que se acceda a la web, nos dirá un texto auspicioso aleatorio.
 5. Acceder a la web:
    - `http://127.0.0.1:5000` → "Hola, mundo"
    - `http://127.0.0.1:5000/frotar/<n>` → obtener N frases aleatorias de la Bayeta de la Fortuna
+
+## Ejecución con Docker
+
+1. Construir la imagen:
+   - docker build -t bayeta_app .
+
+2. Ejecutar el contenedor:
+   - docker run -p 5000:5000 --network bayeta_net bayeta_app
+
+3. Acceder en navegador:
+   - `http://127.0.0.1:5000` → Hola, mundo
+   - `http://127.0.0.1/frotar/<n>` → obtener N frases aleatorias
