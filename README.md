@@ -1,26 +1,31 @@
 # pps_python_git_docker1.0
+
+Aplicación web "La Balleta de la Fortuna"
+
+#Función:
+Cada vez que se acceda a la web, nos dirá un texto auspicioso aleatorio.
+
 ## Instalación y ejecución
 
-### 1. Clonar el repositorio
+## Requisitos
+- Python 3.10 o superior
+- Git
 
-git clone git@github.com:shao0088/pps_python_git_docker1.0.git
-cd pps_python_git_docker
+## Ejecución de la app
+1. Clonar el repositorio:
+  - git clone https://github.com/shao0088/pps_python_git_docker.git
+  - cd pps_python_git_docker
 
-### 2. Crear entorno virtual
+2. Crear y activar un entorno virtual
+  - python -m venv venv
+  - source venv/bin/activate
 
-python3 -m venv venv
+3. Instalar las dependencias:
+  - pip install -r requirements.txt
 
-### 3. Activar entorno virtual
+4. Ejecutar el script:
+  - python app.py
 
-source venv/bin/activate
-
-### 4. Instalar dependencias
-
-pip install -r requirements.txt
-
-### 5. Ejecutar la aplicación
-
-python app.py
-
-Si todo funciona correctamente, debería mostrarse:
-Hola, mundo
+5. Acceder a la web:
+   - `http://127.0.0.1:5000` → "Hola, mundo"
+   - `http://127.0.0.1:5000/frotar/<n>` → obtener N frases aleatorias de la Bayeta de la Fortuna

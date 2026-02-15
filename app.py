@@ -17,4 +17,3 @@ if __name__ == "__main__":
 
 print("Probando Bayeta de la Fortuna:")
 print(frotar(3))
-origin/experto_python_real

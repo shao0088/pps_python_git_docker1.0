@@ -11,4 +11,3 @@ def frotar(n_frases: int = 1) -> list:
         frases.append(random.choice(frases_disponibles))
 
     return frases
-origin/experto_python_real
