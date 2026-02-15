@@ -1,5 +1,16 @@
+from flask import Flask, jsonify
 from bayeta import frotar
 
-print("Hola, mundo")
+app = Flask(__name__)
 
-frotar()
+@app.route("/")
+def home():
+    return "Hola, mundo"
+
+@app.route("/frotar/<int:n_frases>")
+def frotar_endpoint(n_frases):
+    frases = frotar(n_frases)
+    return jsonify(frases)
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
